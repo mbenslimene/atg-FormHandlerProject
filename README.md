@@ -52,13 +52,13 @@ run the sql commandes in the file `sql\Create Drivers sql commandes.txt` to crea
 
 ## Screenshots
 
-
+`Show All Drivers`
 ![Alt text](/screenshots/ShowAllDrivers.PNG?raw=true "Show All Drivers")
 
-
+`Detail Driver`
 ![Alt text](/screenshots/DetailDriver.PNG?raw=true "Detail Driver")
 
-
+`Edit`
 ![Alt text](/screenshots/Edit.PNG?raw=true "Edit")
 
 
