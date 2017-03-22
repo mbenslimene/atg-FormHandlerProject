@@ -8,12 +8,12 @@ This project consists in realizing an ATG WEB module which implements the relati
 We will define 6 item-descriptor: A: Driver, B: License, C: Destination, D: Vehicle, E: Accident, F: Police fine.
 
 The relationships between these entities are as follows:
-Relation 1-1 : A & B
-Relation 1-n List : A & C
-Relation n-n : A & D
-Relation 1-n Set : A & E
-Relation 1-n Map : A & F
-This relation ship is mentioned in this file `/config/quickstart/repository/NewRepBD.xml`
+- Relation 1-1 : A & B
+- Relation 1-n List : A & C
+- Relation n-n : A & D
+- Relation 1-n Set : A & E
+- Relation 1-n Map : A & F
+- This relation ship is mentioned in this file `/config/quickstart/repository/NewRepBD.xml`
 
 - I have implemented  a droplet to create a random number of drivers with a random list of accident, police fine.
 Each item descriptor is generated with a random value.
