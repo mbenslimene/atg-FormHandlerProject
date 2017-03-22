@@ -18,7 +18,7 @@ This relation ship is mentioned in this file `/config/quickstart/repository/NewR
 
 - I have implemented  a droplet to create a random number of drivers with a random list of accident, police fine.
 Each item descriptor is generated with a random value.
-- I have create a scheduled job on ATG (planned each 10 minutes ) to create a random list of drivers, accident, police fine …
+- I have create a scheduled job on ATG (planned each 10 minutes ) to create a random list of drivers, accident, police fine
 - I have displayed the list of Drivers on JSP page by 20 elements orders by first name & last name and add a pagination functionality to display the next and preview 20 drivers, When click on driver, the detail of this driver will be displayed, on this page we can edit, delete a driver, add/remove a list of accident, police fine…
 - On each modification of Licence, a mail will be sent (driver has a property mail)
  
@@ -53,14 +53,23 @@ run the sql commandes in the file `sql\Create Drivers sql commandes.txt` to crea
 ## Screenshots
 
 `Show All Drivers`
+
 ![Alt text](/screenshots/ShowAllDrivers.PNG?raw=true "Show All Drivers")
 
 `Detail Driver`
+
 ![Alt text](/screenshots/DetailDriver.PNG?raw=true "Detail Driver")
 
 `Edit`
+
 ![Alt text](/screenshots/Edit.PNG?raw=true "Edit")
 
 
+## Team
+
+[[Mahdi Ben Selimene]](https://twitter.com/mahdochy) |
+ [[Malek Ayadi]](https://github.com/malekayadi6) |
+ [[Raja Kacem]](https://github.com/SnapCode007)
+---|---|---
 
 
