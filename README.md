@@ -13,7 +13,8 @@ The relationships between these entities are as follows:
 - Relation n-n : A & D
 - Relation 1-n Set : A & E
 - Relation 1-n Map : A & F
-- This relation ship is mentioned in this file `/config/quickstart/repository/NewRepBD.xml`
+
+This relation ship is mentioned in this file `/config/quickstart/repository/NewRepBD.xml`
 
 - I have implemented  a droplet to create a random number of drivers with a random list of accident, police fine.
 Each item descriptor is generated with a random value.
@@ -48,3 +49,18 @@ run quickstart-all.sql under sql folder.
 run the sql commandes in the file `sql\Create Drivers sql commandes.txt` to create all the driver items.
 
 -- Default listening port is `http://localhost:8480/QuickStart`
+
+## Screenshots
+
+`Show All Drivers`
+![Alt text](/screenshots/ShowAllDrivers.PNG?raw=true "Show All Drivers")
+
+`Detail Driver`
+![Alt text](/screenshots/DetailDriver.PNG?raw=true "Detail Driver")
+
+`Edit`
+![Alt text](/screenshots/Edit.PNG?raw=true "Edit")
+
+
+
+
