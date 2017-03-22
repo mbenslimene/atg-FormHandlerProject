@@ -1,0 +1,25 @@
+DROP TABLE policefineE1;
+DROP TABLE destinationE1;
+DROP TABLE driver_vehiculeE1;
+DROP TABLE vehiculeE1;
+DROP TABLE accidentE1;
+DROP TABLE licenseE1;
+DROP TABLE driverE1;
+
+CREATE TABLE driverE1(id_driver number not null,first_name varchar2(100),last_name varchar2(100),mail varchar2(100),primary key(id_driver));
+CREATE TABLE licenseE1(id_driver number not null references driverE1(id_driver) on delete cascade,num varchar2(100),type varchar2(100),primary key(id_driver));
+
+create table accidentE1(id_accident number not null,description varchar2(1000),
+date_accident varchar2(100),id_driver number references driverE1(id_driver) on delete cascade,primary key(id_accident));
+
+
+create table vehiculeE1(id_vehicule number not null,mat varchar2(100),mark varchar2(100),primary key(id_vehicule));
+create table driver_vehiculeE1(id_driver number references driverE1(id_driver),id_vehicule number references vehiculeE1(id_vehicule) on delete cascade);
+
+
+create table destinationE1(id_destination varchar2(100) not null primary key,seq_num number,
+destination_city varchar2(100),id_driver number references driverE1(id_driver) on delete cascade);
+
+
+create table policefineE1(id number not null ,key varchar2(100),value varchar2(100),
+id_driver number references driverE1(id_driver) on delete cascade,primary key(id));

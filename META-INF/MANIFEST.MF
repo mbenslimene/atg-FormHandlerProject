@@ -1,0 +1,9 @@
+ATG-Config-Path: config/
+ATG-Required: DSS DCS DPS DafEar.Admin 
+ATG-Class-Path: classes/ lib/ojdbc6.jar
+ATG-Client-Class-Path: classes/ 
+ATG-J2EE: j2ee-apps/QuickStart
+ATG-EAR-Module: j2ee-apps/QuickStart
+ATG-Version: 1.0.0.Linux
+ATG-Product-Full: QuickSart Sample
+ATG-Build: 1405

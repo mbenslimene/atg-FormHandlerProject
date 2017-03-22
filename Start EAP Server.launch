@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="JBoss_HOME" value="C:\AtgFolder\jboss-eap-6.4"/>
+<mapEntry key="NOPAUSE" value="Y"/>
+</mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.ui.externaltools.launchGroup"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_INCLUDE_REFERENCED_PROJECTS" value="false"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${project}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\AtgFolder\jboss-eap-6.4\bin\standalone.bat"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-c quickstart.xml -b 0.0.0.0 -Djboss.socket.binding.port-offset=100 -Dmail.smtp.starttls.enable=true"/>
+</launchConfiguration>

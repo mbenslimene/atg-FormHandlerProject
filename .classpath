@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DCS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DCS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DSS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DSS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DPS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DPS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/servlet.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/ice.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/spring-aop-1.2-rc1.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/jline-0.9.94.jar"/>
+	<classpathentry kind="lib" path="C:/AtgFolder/ATG11.2/DAS/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

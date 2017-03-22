@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<actor-template default-chain-id="summary"
+  xsi:noNamespaceSchemaLocation="http://www.atg.com/xsds/actorChain_1.0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <actor-chain id="login" transaction="TX_SUPPORTS">
+    <form id="profileFormHandler-login" name="/atg/userprofiling/ProfileFormHandler"  handle="login" var="profileFormHandler">
+      <input name="value.login" value="${param.login}" />
+      <input name="value.password" value="${param.password}" />
+      <input name="loginErrorURL" value="/rest/model/atg/userprofiling/ProfileActor/login-error"/>
+      <input name="loginSuccessURL" value="/rest/model/atg/userprofiling/ProfileActor/login-success"/>
+    </form>
+  </actor-chain>
+  <actor-chain id="login-error" transaction="TX_SUPPORTS">
+    <actor id="error" name="/atg/userprofiling/ProfileActor" chain-id="error" return-model-var="model">
+      <output id="model" add-map-children="true" value="${model}"/>
+    </actor>
+  </actor-chain>
+  <actor-chain id="login-success" transaction="TX_SUPPORTS">
+  </actor-chain>
+
+  <actor-chain id="logout" transaction="TX_SUPPORTS">
+    <form id="profileFormHandler-logout" name="/atg/userprofiling/ProfileFormHandler"  handle="logout" var="profileFormHandler">
+      <input name="logoutErrorURL" value="/rest/model/atg/userprofiling/ProfileActor/logout-error"/>
+      <input name="logoutSuccessURL" value="/rest/model/atg/userprofiling/ProfileActor/logout-success"/>
+    </form>
+  </actor-chain>
+  <actor-chain id="logout-error" transaction="TX_SUPPORTS">
+    <actor id="error" name="/atg/userprofiling/ProfileActor" chain-id="error" return-model-var="model">
+      <output id="model" add-map-children="true" value="${model}"/>
+    </actor>
+  </actor-chain>
+  <actor-chain id="logout-success" transaction="TX_SUPPORTS">
+  </actor-chain>
+  
+  <actor-chain id="create" transaction="TX_SUPPORTS">
+    <form id="profileFormHandler-create" name="/atg/userprofiling/ProfileFormHandler" handle="create" var="profileFormHandler">
+      <input name="value.autoLogin" value="${param.autoLogin}"/>
+      <input name="value.realmId" value="${param.realmId}"/>
+      <input name="value.confirmPassword" value="${param.confirmPassword}"/>
+      <input name="value.dateOfBirth" value="${param.dateOfBirth}"/>
+      <input name="value.firstName" value="${param.firstName}"/>
+      <input name="value.email" value="${param.email}"/>
+      <input name="value.gender" value="${param.gender}"/>
+      <input name="value.lastName" value="${param.lastName}"/>
+      <input name="value.login" value="${param.login}"/>
+      <input name="value.member" value="${param.member}"/>
+      <input name="value.middleName" value="${param.middleName}"/>
+      <input name="value.password" value="${param.password}"/>
+      <input name="value.homeAddress.address1" value="${objectParam.homeAddress.address1}"/>
+      <input name="value.homeAddress.address2" value="${objectParam.homeAddress.address2}"/>
+      <input name="value.homeAddress.address3" value="${objectParam.homeAddress.address3}"/>
+      <input name="value.homeAddress.city" value="${objectParam.homeAddress.city}"/>
+      <input name="value.homeAddress.companyName" value="${objectParam.homeAddress.companyName}"/>
+      <input name="value.homeAddress.country" value="${objectParam.homeAddress.country}"/>
+      <input name="value.homeAddress.county" value="${objectParam.homeAddress.county}"/>
+      <input name="value.homeAddress.jobTitle" value="${objectParam.homeAddress.jobTitle}"/>
+      <input name="value.homeAddress.postalCode" value="${objectParam.homeAddress.postalCode}"/>
+      <input name="value.homeAddress.faxNumber" value="${objectParam.homeAddress.faxNumber}"/>
+      <input name="value.homeAddress.firstName" value="${objectParam.homeAddress.firstName}"/>
+      <input name="value.homeAddress.lastName" value="${objectParam.homeAddress.lastName}"/>
+      <input name="value.homeAddress.middleName" value="${objectParam.homeAddress.middleName}"/>
+      <input name="value.homeAddress.phoneNumber" value="${objectParam.homeAddress.phoneNumber}"/>
+      <input name="value.homeAddress.prefix" value="${objectParam.homeAddress.prefix}"/>
+      <input name="value.homeAddress.state" value="${objectParam.homeAddress.state}"/>
+      <input name="value.homeAddress.suffix" value="${objectParam.homeAddress.suffix}"/>
+      
+      <input name="createErrorURL" value="/rest/model/atg/userprofiling/ProfileActor/create-error"/>
+      <input name="createSuccessURL" value="/rest/model/atg/userprofiling/ProfileActor/create-success"/>
+    </form>
+  </actor-chain>
+  <actor-chain id="create-error" transaction="TX_SUPPORTS">
+    <actor id="error" name="/atg/userprofiling/ProfileActor" chain-id="error" return-model-var="model">
+      <output id="model" add-map-children="true" value="${model}"/>
+    </actor>
+  </actor-chain>
+  <actor-chain id="create-success" transaction="TX_SUPPORTS">
+  </actor-chain>
+
+  <actor-chain id="update" transaction="TX_SUPPORTS">
+    <form id="profileFormHandler-update" name="/atg/userprofiling/ProfileFormHandler" handle="update" var="profileFormHandler">
+      <input name="value.autoLogin" value="${param.autoLogin}"/>
+      <input name="value.realmId" value="${param.realmId}"/>
+      <input name="value.dateOfBirth" value="${param.dateOfBirth}"/>
+      <input name="value.firstName" value="${param.firstName}"/>
+      <input name="value.email" value="${param.email}"/>
+      <input name="value.gender" value="${param.gender}"/>
+      <input name="value.lastName" value="${param.lastName}"/>
+      <input name="value.member" value="${param.member}"/>
+      <input name="value.middleName" value="${param.middleName}"/>
+      <input name="value.homeAddress.address1" value="${objectParam.homeAddress.address1}"/>
+      <input name="value.homeAddress.address2" value="${objectParam.homeAddress.address2}"/>
+      <input name="value.homeAddress.address3" value="${objectParam.homeAddress.address3}"/>
+      <input name="value.homeAddress.city" value="${objectParam.homeAddress.city}"/>
+      <input name="value.homeAddress.companyName" value="${objectParam.homeAddress.companyName}"/>
+      <input name="value.homeAddress.country" value="${objectParam.homeAddress.country}"/>
+      <input name="value.homeAddress.county" value="${objectParam.homeAddress.county}"/>
+      <input name="value.homeAddress.jobTitle" value="${objectParam.homeAddress.jobTitle}"/>
+      <input name="value.homeAddress.postalCode" value="${objectParam.homeAddress.postalCode}"/>
+      <input name="value.homeAddress.faxNumber" value="${objectParam.homeAddress.faxNumber}"/>
+      <input name="value.homeAddress.firstName" value="${objectParam.homeAddress.firstName}"/>
+      <input name="value.homeAddress.lastName" value="${objectParam.homeAddress.lastName}"/>
+      <input name="value.homeAddress.middleName" value="${objectParam.homeAddress.middleName}"/>
+      <input name="value.homeAddress.phoneNumber" value="${objectParam.homeAddress.phoneNumber}"/>
+      <input name="value.homeAddress.prefix" value="${objectParam.homeAddress.prefix}"/>
+      <input name="value.homeAddress.state" value="${objectParam.homeAddress.state}"/>
+      <input name="value.homeAddress.suffix" value="${objectParam.homeAddress.suffix}"/>
+      
+      <input name="updateErrorURL" value="/rest/model/atg/userprofiling/ProfileActor/update-error"/>
+      <input name="updateSuccessURL" value="/rest/model/atg/userprofiling/ProfileActor/update-success"/>
+    </form>
+  </actor-chain>
+  <actor-chain id="update-error" transaction="TX_SUPPORTS">
+    <actor id="error" name="/atg/userprofiling/ProfileActor" chain-id="error" return-model-var="model">
+      <output id="model" add-map-children="true" value="${model}"/>
+    </actor>
+  </actor-chain>
+  <actor-chain id="update-success" transaction="TX_SUPPORTS">
+  </actor-chain>
+
+  <actor-chain id="error" transaction="TX_SUPPORTS">
+    <component id="profileFormHandler-error" name="/atg/userprofiling/ProfileFormHandler" component-var="profileFormHandler">
+      <output id="formError" name="formError" value="${profileFormHandler.formError}"/>
+      <output id="formExceptions" name="formExceptions" value="${profileFormHandler.formExceptions}"/>
+    </component>
+  </actor-chain>
+
+  <actor-chain id="detailed" transaction="TX_SUPPORTS">
+    <component id="profile" name="/atg/userprofiling/Profile" component-var="profile">
+      <output id="profile" name="profile" value="${profile.dataSource}" filter-id="detailed"/>
+    </component>
+  </actor-chain>
+
+  <actor-chain id="summary" transaction="TX_SUPPORTS">
+    <component id="profile" name="/atg/userprofiling/Profile" component-var="profile">
+      <output id="profile" name="profile" value="${profile.dataSource}" filter-id="summary"/>
+    </component>
+  </actor-chain>
+
+</actor-template>
+<!-- @version $Id: //product/DPS/version/11.2/templates/DPS/config/userprofiling/atg/userprofiling/profileActor.xml#1 $$Change: 946917 $ -->

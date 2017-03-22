@@ -1,0 +1,7 @@
+WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
+defaultDestination=C\:/AtgFolder/jboss-eap-6.4/standalone/deployments/QuickStart/QuickStart.ear/QuickStart.war
+defaultVariables=
+eclipse.preferences.version=1
+includeTeamPrivateFiles=false
+map|0=j2ee-apps/QuickStart/QuickStart.war|,|,|,|,
+useCurrentDateForDestinationFiles=false

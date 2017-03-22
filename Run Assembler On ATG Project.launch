@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="DYNAMO_HOME" value="C:/AtgFolder/ATG11.2/home"/>
+<mapEntry key="JAVA_HOME" value="C:/Program Files/Java/jdk1.7.0_80"/>
+<mapEntry key="JAVA_OPTS" value="-Duser.country=US -Duser.language=en"/>
+<mapEntry key="JBOSS_HOME" value="C:/AtgFolder/EAP-6.4.0"/>
+</mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.ui.externaltools.launchGroup"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_INCLUDE_REFERENCED_PROJECTS" value="false"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${project}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:/AtgFolder/ATG11.2/home/bin/runAssembler.bat"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-jboss -overwrite -server ${project_name} ${env_var:JBOSS_HOME}/standalone/deployments/${project_name}/${project_name}.ear   -m ${project_name}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${env_var:DYNAMO_HOME}"/>
+</launchConfiguration>

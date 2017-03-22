@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+	<header>
+		<name>Mahdi</name>
+		<author>BS</author>
+	</header>
+
+	<item-descriptor name="driver">
+		<table name="driverE1" type="primary" id-column-name="id_driver">
+			<property name="firstName" data-type="string" column-name="first_name" />
+			<property name="lastName" data-type="string" column-name="last_name" />
+			<property name="email" data-type="string" column-name="mail" />
+		</table>
+		<table name="licenseE1" type="auxiliary" id-column-name="id_driver">
+			<property name="type" column-name="type" />
+			<property name="num" column-name="num" />
+		</table>
+		<table name="accidentE1" type="multi" id-column-name="id_driver">
+			<property name="accidents" data-type="set"
+				component-item-type="accident" column-name="id_accident" cascade="update"></property>
+		</table>
+		<table name="driver_vehiculeE1" type="multi" id-column-names="id_driver">
+			<property name="vehicules" data-type="set"
+				component-item-type="vehicule" column-name="id_vehicule" cascade="update"></property>
+		</table>
+		<table name="destinationE1" type="multi" id-column-name="id_driver"
+			multi-column-name="seq_num">
+			<property name="destinations" data-type="list"
+				component-item-type="destination" column-name="id_destination"
+				cascade="update,insert"></property>
+		</table>
+
+		<table name="policefineE1" type="multi" id-column-name="id_driver"
+			multi-column-name="key">
+			<property name="policefines" column-name="id" data-type="map"
+				component-item-type="policefine" cascade="update" />
+		</table>
+	</item-descriptor>
+
+	<item-descriptor name="accident">
+		<table name="accidentE1" type="primary" id-column-name="id_accident">
+			<property name="dateAccident" data-type="string"
+				column-name="date_accident" />
+			<property name="description" data-type="string" column-name="description" />
+			<property name="driver" column-name="id_driver" item-type="driver" />
+		</table>
+	</item-descriptor>
+
+
+	<item-descriptor name="vehicule">
+		<table name="vehiculeE1" type="primary" id-column-name="id_vehicule">
+<!-- 		<property name="id_vehicule" data-type="string"  column-name="id_vehicule" /> -->
+			<property name="mat" data-type="string" column-name="mat" />
+			<property name="mark" data-type="string" column-name="mark" />
+		</table>
+		<table type="multi" name="driver_vehiculeE1" id-column-name="id_vehicule">
+			<property name="drivers" column-name="id_driver" data-type="set"
+				component-item-type="driver" cascade="update"></property>
+		</table>
+	</item-descriptor>
+
+	<item-descriptor name="destination">
+		<table name="destinationE1" type="primary" id-column-name="id_destination">
+			<property name="destinationCity" data-type="string"
+				column-name="destination_city" />
+			<property name="seq" data-type="int" column-name="seq_num" />
+			<property name="driver" column-name="id_driver" item-type="driver" />
+		</table>
+	</item-descriptor>
+	
+	<item-descriptor name="policefine">
+		<table name="policefineE1" type="primary" id-column-name="id">
+			<property name="value" data-type="string" />
+			<property name="key" data-type="string" column-name="key" />
+			<property name="driver" column-name="id_driver" item-type="driver" />
+		</table>
+	</item-descriptor>
+
+</gsa-template>
